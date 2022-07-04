@@ -2,7 +2,7 @@
 
 ln -fsv ../csstype ./node_modules/@types/csstype
 
-mkdir ./dist
+mkdir -p ./dist
 
 pushd ./src/app
 tar c *.html *.ico | tar xv --directory ../../dist

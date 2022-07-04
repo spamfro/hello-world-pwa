@@ -8,7 +8,7 @@ import typescript from '@rollup/plugin-typescript';
 // import resolve from '@rollup/plugin-node-resolve';
 // import replace from '@rollup/plugin-replace';
 
-// import { terser } from "rollup-plugin-terser";
+// import { terser } from 'rollup-plugin-terser';
 
 export default {
   external: ['react', 'react-dom'],
@@ -31,15 +31,15 @@ export default {
       output: 'index.css'
     }),
     typescript({
-      "compilerOptions": {
-        "allowJs": true,
-        "esModuleInterop": true,
-        "jsx": "react",
-        "module": "es6",
-        "target": "es6",
-        "lib": ["dom", "es2015"],
+      'compilerOptions': {
+        'allowJs': true,
+        'esModuleInterop': true,
+        'jsx': 'react',
+        'lib': ['dom', 'es2015'],
+        'module': 'es6',
+        'target': 'es6',
       },
-      // "include": ["./src/**/*"]
+      'include': ['./src/app/**/*']
     }),
     // resolve({
     //   moduleDirectories: ['node_modules']

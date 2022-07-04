@@ -1,10 +1,12 @@
 {
-  "name": "hello-world",
+  "name": "hello-world-pwa",
   "version": "1.0.0",
-  "description": "Hello World",
+  "description": "Hello World PWA",
   "scripts": {
     "postinstall": "chmod ugo+x ./scripts/*.sh",
-    "build": "./scripts/build.sh",
+    "build": "npm run build-app && npm run build-sw",
+    "build-app": "./scripts/build-app.sh",
+    "build-sw": "./scripts/build-sw.sh",
     "clean": "./scripts/clean.sh",
     "deploy": "./scripts/deploy.sh",
     "deploy-source": "./scripts/deploy-source.sh",
