@@ -31,14 +31,7 @@ export default {
       output: 'index.css'
     }),
     typescript({
-      'compilerOptions': {
-        'allowJs': true,
-        'esModuleInterop': true,
-        'jsx': 'react',
-        'lib': ['dom', 'es2015'],
-        'module': 'es6',
-        'target': 'es6',
-      },
+      'tsconfig': './src/app/tsconfig.json',
       'include': ['./src/app/**/*']
     }),
     // resolve({

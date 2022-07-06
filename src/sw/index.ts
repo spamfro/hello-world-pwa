@@ -1,5 +1,3 @@
-/// <reference lib="webworker" />
-
 const cacheName = 'cache-v1';
 const resourcesToPrecache = [
   '/',
@@ -11,7 +9,7 @@ const resourcesToPrecache = [
   'https://unpkg.com/react@17.0.2/umd/react.development.js',
 ];
 
-self.addEventListener('install', (event) => {
+self.addEventListener('install', (event: ExtendableEvent) => {
   console.log('install');
   event.waitUntil(
     self.caches.open(cacheName)
@@ -23,7 +21,7 @@ self.addEventListener('activate', (event) => {
   console.log('activate');
 });
 
-self.addEventListener('fetch', (event) => {
+self.addEventListener('fetch', (event: FetchEvent) => {
   console.log('fetch:', event.request.url);
   event.respondWith(
     self.caches.match(event.request)

@@ -8,13 +8,7 @@ export default {
   },
   plugins: [
     typescript({
-      'compilerOptions': {
-        'allowJs': true,
-        'esModuleInterop': true,
-        'lib': ['ES6', 'WebWorker'],
-        'module': 'es6',
-        'target': 'es6',
-      },
+      'tsconfig': './src/sw/tsconfig.json',
       'include': ['./src/sw/**/*']
     }),
   ]
